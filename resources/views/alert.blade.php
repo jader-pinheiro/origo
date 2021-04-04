@@ -9,7 +9,7 @@
                 <div class="card-body">
                     <h5 class="card-title">OPSS !!</h5>
                     <p class="card=text">
-                        Clintes possui plano free no Estado de São Paulo. Não é possivel exclui-lo
+                        Cliente possui plano free no Estado de São Paulo. Não é possivel excluí-lo
                     </p><br>
                     <a href="/clientes" class="btn btn-primary">voltar</a>
                 </div>
