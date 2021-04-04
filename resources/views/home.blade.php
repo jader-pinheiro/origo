@@ -14,7 +14,10 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('Logado com sucesso') }}
+                   <div class="card-footer">
+                     <a href="/" class="btn btn-sm btn-primary" role="button">Ir para o painel</a>
+                   </div>
                 </div>
             </div>
         </div>

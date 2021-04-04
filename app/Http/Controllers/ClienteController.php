@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Cliente;
+use App\Plano;
+use Illuminate\Support\Facades\DB;
 
 class ClienteController extends Controller
 {
@@ -16,7 +18,12 @@ class ClienteController extends Controller
     public function index()
     {
         $cli = Cliente::all();
-        return view('clientes', compact('cli'));
+
+        $clientes = new Cliente();
+        $cliente = $clientes->getClientes();
+
+
+        return view('clientes', compact('cli', 'cliente'));
     }
 
     /**
@@ -109,9 +116,53 @@ class ClienteController extends Controller
     public function destroy($id)
     {
         $cli = Cliente::find($id);
+
+
+        $chk =
+            DB::table('clientes')
+            ->select('planos.plano', 'planos.mensalidae', 'clientes_planos.id')
+            ->join('clientes_planos', 'clientes.id', '=', 'clientes_planos.cliente_id')
+            ->join('planos', 'planos.id', '=', 'clientes_planos.plano_id')
+            ->where('clientes_planos.cliente_id', $id)
+            ->where('planos.plano', '=', 'free')
+            ->where('clientes.estado', '=', 'São Paulo')
+            ->orderBy('clientes_planos.id')
+            ->exists();
+        //dd($chk);
+
+        if ($chk == true) {
+
+            return view('alert');
+        }
+
+
         if (isset($cli)) {
             $cli->delete();
         }
         return redirect('/clientes');
+    }
+
+
+    public function getPlanos($id)
+    {
+        $cli = Cliente::find($id);
+
+        $t = new Cliente();
+        $nomePlano = $t->getNomePlanos($id);
+        $planos = $cli->getPlanos;
+
+        if (isset($cli)) {
+            return view('get_planos_cli', compact('cli', 'planos', 'nomePlano'));
+        }
+        return redirect('/get_planos');
+    }
+
+
+    public function tester()
+    {
+
+        $t = new Cliente();
+
+        //dd($t->getNomePlanos());
     }
 }

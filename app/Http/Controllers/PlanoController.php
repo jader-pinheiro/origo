@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Plano;
 use Illuminate\Http\Request;
 
 class PlanoController extends Controller
@@ -13,7 +14,8 @@ class PlanoController extends Controller
      */
     public function index()
     {
-        //
+        $plan = Plano::all();
+        return view('planos/planos', compact('plan'));
     }
 
     /**

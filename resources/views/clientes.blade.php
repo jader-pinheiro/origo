@@ -5,7 +5,7 @@
     <div class="card-body">
         <h5 class="card-title">Cadastro de Clientes</h5>
 
-@if(count($cli) > 0)
+
         <table class="table table-ordered table-hover">
             <thead>
                 <tr>
@@ -22,12 +22,13 @@
                     <td>
                         <a href="/clientes/edit/{{$c->id}}" class="btn btn-sm btn-primary">Editar</a>
                         <a href="/clientes/delete/{{$c->id}}" class="btn btn-sm btn-danger">Apagar</a>
+                        <a href="/get_planos/{{$c->id}}" class="btn btn-sm btn-warning">Listar Planos</a>
                     </td>
                 </tr>
     @endforeach                
             </tbody>
         </table>
-@endif        
+       
     </div>
     <div class="card-footer">
         <a href="/clientes/novo" class="btn btn-sm btn-primary" role="button">Cadastrar Cliente</a>

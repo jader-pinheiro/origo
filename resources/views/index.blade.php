@@ -7,17 +7,16 @@
         <div class="card-deck">
             <div class="card border border-primary">
                 <div class="card-body">
-                    <h5 class="card-title">Origo Manager</h5>
+                    <h5 class="card-title">Lista de Planos</h5>
                     <p class="card=text">
-                        Aqui você cadastra todos os seus produtos.
-                        Só não se esqueça de cadastrar previamente as categorias
-                    </p>
-                    <a href="/produtos" class="btn btn-primary">Continuar</a>
+                        Planos
+                    </p><br>
+                    <a href="/planos" class="btn btn-primary">Continuar</a>
                 </div>
             </div>
             <div class="card border border-primary">
                 <div class="card-body">
-                    <h5 class="card-title">Cadastro de CateClientesgorias</h5>
+                    <h5 class="card-title">Cadastro de Clientes</h5>
                     <p class="card=text">
                         Cadastro de Clientes
                     </p>

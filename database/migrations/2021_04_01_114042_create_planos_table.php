@@ -14,7 +14,7 @@ class CreatePlanosTable extends Migration
     public function up()
     {
         Schema::create('planos', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
             $table->string('plano', 60);
             $table->float('mensalidae', 8, 2);
