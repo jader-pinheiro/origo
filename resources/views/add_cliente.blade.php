@@ -32,7 +32,7 @@
                        id="nascCliente" placeholder="Dt. Nascimento" required>                        
             </div>
             <button type="submit" class="btn btn-primary btn-sm">Salvar</button>
-            <button type="cancel" class="btn btn-danger btn-sm">Cancel</button>
+             <a href="/clientes" class="btn btn-danger btn-sm" role="button">Cancelar</a>
         </form>
     </div>
 </div>

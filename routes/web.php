@@ -17,14 +17,14 @@ Auth::routes();
 //Auth::routes(['register' => false]);
 Route::get('/home', function () {
     return view('home');
-});
+})->middleware('auth');
 
 Route::get('/', function () {
     return view('index');
 })->middleware('auth');
 
 Route::get('/clientes', 'ClienteController@index')->middleware('auth');
-Route::get('/clientes/novo', 'ClienteController@create')->middleware('auth');
+Route::get('/clientes/add', 'ClienteController@create')->middleware('auth');
 Route::get('/clientes/delete/{id}', 'ClienteController@destroy')->middleware('auth');
 Route::get('/clientes/edit/{id}', 'ClienteController@edit')->middleware('auth');
 Route::get('/get_planos/{id}', 'ClienteController@getPlanos')->middleware('auth');

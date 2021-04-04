@@ -19,7 +19,7 @@
                 <tr>
                     <td>{{$p->id}}</td>
                     <td>{{$p->plano}}</td>
-                    <td>{{$p->mensalidae}}</td>
+                    <td>{{$p->mensalidade}}</td>
                 </tr>
     @endforeach                
             </tbody>

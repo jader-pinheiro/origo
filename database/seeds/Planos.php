@@ -15,9 +15,9 @@ class Planos extends Seeder
 
 
         $rows = [
-            ['plano' => 'Free', 'mensalidae' => 0],
-            ['plano' => 'Basic', 'mensalidae' => 100],
-            ['plano' => 'Plus', 'mensalidae' => 187]
+            ['plano' => 'Free', 'mensalidade' => 0],
+            ['plano' => 'Basic', 'mensalidade' => 100],
+            ['plano' => 'Plus', 'mensalidade' => 187]
         ];
 
         foreach ($rows as $row) {

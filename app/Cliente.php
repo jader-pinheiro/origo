@@ -21,7 +21,7 @@ class Cliente extends Model
         //return $this->hasMany('App\Plano');
         $nomePlanos =
             DB::table('clientes')
-            ->select('planos.plano', 'planos.mensalidae', 'clientes_planos.id')
+            ->select('planos.plano', 'planos.mensalidade', 'clientes_planos.id')
             ->join('clientes_planos', 'clientes.id', '=', 'clientes_planos.cliente_id')
             ->join('planos', 'planos.id', '=', 'clientes_planos.plano_id')
             ->where('clientes_planos.cliente_id', $id)
@@ -42,7 +42,7 @@ class Cliente extends Model
         $clientes =
             DB::table('clientes')
             ->distinct('clientes_planos . cliente_id')
-            //->select('planos.plano', 'planos.mensalidae', 'clientes_planos.id')
+            //->select('planos.plano', 'planos.mensalidade', 'clientes_planos.id')
             ->join('clientes_planos', 'clientes.id', '=', 'clientes_planos.cliente_id')
             ->join('planos', 'planos.id', '=', 'clientes_planos.plano_id')
             //->where('clientes_planos.cliente_id', $id)

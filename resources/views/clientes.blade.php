@@ -31,7 +31,7 @@
        
     </div>
     <div class="card-footer">
-        <a href="/clientes/novo" class="btn btn-sm btn-primary" role="button">Cadastrar Cliente</a>
+        <a href="/clientes/add" class="btn btn-sm btn-primary" role="button">Cadastrar Cliente</a>
     </div>
 </div>
 

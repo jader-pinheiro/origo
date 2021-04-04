@@ -20,7 +20,7 @@
                 <tr>
                     <td>{{$p->id}}</td>                               
                     <td>{{$p->plano}}</td>
-                    <td>{{$p->mensalidae}}</td>
+                    <td>{{$p->mensalidade}}</td>
                      
                     <td>
                         {{-- <a href="/clientes/edit/{{$p->id}}" class="btn btn-sm btn-primary">Editar</a> --}}

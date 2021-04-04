@@ -120,7 +120,7 @@ class ClienteController extends Controller
 
         $chk =
             DB::table('clientes')
-            ->select('planos.plano', 'planos.mensalidae', 'clientes_planos.id')
+            ->select('planos.plano', 'planos.mensalidade', 'clientes_planos.id')
             ->join('clientes_planos', 'clientes.id', '=', 'clientes_planos.cliente_id')
             ->join('planos', 'planos.id', '=', 'clientes_planos.plano_id')
             ->where('clientes_planos.cliente_id', $id)

@@ -17,7 +17,7 @@ class CreatePlanosTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('plano', 60);
-            $table->float('mensalidae', 8, 2);
+            $table->float('mensalidade', 8, 2);
         });
     }
 
